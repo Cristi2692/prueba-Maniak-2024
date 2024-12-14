@@ -26,14 +26,15 @@
     object-fit: contain;
   }
 
-  .product-title {
+  h3.product-title {
     font-size: 1.1em;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    line-clamp: 1;
     -webkit-line-clamp: 1;
+    line-clamp: 1;
     -webkit-box-orient: vertical;
+    margin-top:20px;
   }
 
   .category {
@@ -44,12 +45,37 @@
   .price {
     font-weight: bold;
     color: $primary-color;
-    margin: 16px 0 24px;
+    margin: 10px 0 24px;
   }
 
   .product-buttons {
     display: flex;
     gap: 10px;
     justify-content: center;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    padding: 12px;
+    
+    img {
+      height: 180px;
+    }
+
+    h3.product-title {
+      font-size: 1em;
+      margin-top: 16px;
+    }
+
+    .price {
+      margin: 8px 0 20px;
+    }
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    padding: 8px;
+    
+    img {
+      height: 160px;
+    }
   }
 } 
