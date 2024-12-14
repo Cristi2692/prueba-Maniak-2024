@@ -7,6 +7,8 @@ header {
   background-color: $header-bg;
   color: white;
   min-height: 120px;
+  z-index: $z-index-header;
+  box-shadow: $shadow-sm;
 
   h1 {
     font-size: 2rem;
