@@ -4,6 +4,7 @@
   grid-column-gap: 16px;
   grid-row-gap: 32px;
   margin: 20px;
+  padding-bottom: $spacing-lg;
 
   // Tablets grandes y pantallas medianas
   @media (max-width: $breakpoint-lg) {

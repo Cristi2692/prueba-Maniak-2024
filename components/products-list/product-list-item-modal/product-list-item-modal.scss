@@ -8,8 +8,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
-  transition: opacity 0.3s ease;
+  z-index: $z-index-modal;
+  transition: opacity $animation-duration-normal $animation-timing;
+  padding: $spacing-lg;
 
   &.hidden {
     display: none;
@@ -19,17 +20,49 @@
 .modal-content {
   position: relative;
   background: white;
-  padding: 20px;
+  padding: $spacing-md;
   border-radius: 8px;
   max-width: 400px;
+  max-height: 100vh;
   width: 100%;
   text-align: center;
+  overflow-y: hidden;
+
+  h3 {
+    margin-bottom: $spacing-sm;
+  }
+
+  #modal-description {
+    margin-bottom: $spacing-sm;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 10;
+    overflow: hidden;
+    line-height: 1.4;
+  }
+
+  #modal-price {
+    margin-bottom: $spacing-sm;
+    color: $primary-color;
+    font-weight: bold;
+  }
+}
+
+// Creamos un contenedor para la imagen con dimensiones fijas
+.image-container {
+  width: 100%;
+  height: 250px; // Altura fija para todas las imágenes
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: $spacing-sm;
 }
 
 #modal-image {
   width: 100%;
+  height: 100%;
   max-width: 300px;
-  margin-bottom: 20px;
+  object-fit: contain; // Mantiene la proporción y muestra la imagen completa
 }
 
 .close {
@@ -39,4 +72,7 @@
   font-size: 2rem;
   color: $primary-color;
   cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
 } 
