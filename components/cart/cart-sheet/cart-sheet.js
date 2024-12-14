@@ -41,7 +41,7 @@ function renderCartItems() {
 export function show() {
   const cartSheet = document.querySelector(".cart-sheet");
   renderCartItems();
-  cartSheet.classList.toggle("open");
+  cartSheet.classList.add("open");
 }
 
 export function close() {

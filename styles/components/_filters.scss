@@ -1,13 +1,14 @@
 .filters {
   display: flex;
   align-items: center;
+  gap: $spacing-sm;
 
   input,
   select {
-    margin-left: $spacing-sm;
     padding: $spacing-sm;
     border: none;
     border-radius: 5px;
+    height: 40px;
   }
 
   input {
@@ -16,5 +17,31 @@
 
   select {
     width: 170px;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    flex: 1;
+    justify-content: center;
+    gap: $spacing-md;
+    margin-right: $spacing-md;
+
+    input,
+    select {
+      flex: 1;
+      max-width: 300px;
+    }
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    flex-direction: column;
+    width: 100%;
+    margin-right: 0;
+    gap: $spacing-sm;
+
+    input,
+    select {
+      width: 100%;
+      max-width: none;
+    }
   }
 } 
