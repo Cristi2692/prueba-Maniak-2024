@@ -15,4 +15,7 @@ $spacing-md: 1rem;
 $spacing-lg: 2rem;
 
 // Breakpoints
-$mobile-breakpoint: 768px; 
+$breakpoint-xs: 480px;  // Móviles pequeños
+$breakpoint-sm: 768px;  // Móviles grandes/tablets
+$breakpoint-md: 992px;  // Tablets/pantallas pequeñas
+$breakpoint-lg: 1200px; // Pantallas medianas

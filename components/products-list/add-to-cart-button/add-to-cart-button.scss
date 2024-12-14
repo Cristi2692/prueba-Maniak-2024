@@ -77,4 +77,19 @@
       animation: added 2s ease-in forwards;
     }
   }
+
+  @media (max-width: $breakpoint-sm) {
+    width: 180px;
+    height: 32px;
+    padding: 0.4rem;
+    
+    .fa-shopping-cart {
+      font-size: 1.6em;
+    }
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    width: 160px;
+    height: 30px;
+  }
 }

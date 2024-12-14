@@ -53,4 +53,29 @@
     gap: 10px;
     justify-content: center;
   }
+
+  @media (max-width: $breakpoint-sm) {
+    padding: 12px;
+    
+    img {
+      height: 180px;
+    }
+
+    h3.product-title {
+      font-size: 1em;
+      margin-top: 16px;
+    }
+
+    .price {
+      margin: 8px 0 20px;
+    }
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    padding: 8px;
+    
+    img {
+      height: 160px;
+    }
+  }
 } 

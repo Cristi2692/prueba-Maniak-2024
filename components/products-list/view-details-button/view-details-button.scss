@@ -31,4 +31,15 @@
         color: inherit;
         transform: translate(-50%, -50%);
     }
+
+    @media (max-width: $breakpoint-sm) {
+        width: 180px;
+        height: 32px;
+        padding: 0.4rem;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+        width: 160px;
+        height: 30px;
+    }
 }
