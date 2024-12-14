@@ -1,0 +1,74 @@
+@import '../../../styles/shared/variables';
+
+.cart-button {
+  position: relative;
+  align-self: center;
+  margin-top: 0.3rem;
+  width: 200px;
+  padding: 0.5rem;
+  height: 34.5px;
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  overflow: hidden;
+
+  &:hover {
+    background-color: #e0e0e0;
+  }
+
+  &:focus {
+    outline: none !important;
+  }
+
+  .fa-shopping-cart {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: -20%;
+    font-size: 1.8em;
+    transform: translate(-50%, -50%);
+  }
+
+  .fa-square {
+    position: absolute;
+    z-index: 1;
+    top: -20%;
+    left: 53%;
+    font-size: 0.8em;
+    transform: translate(-50%, -50%);
+  }
+
+  span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: inherit;
+    color: #fff;
+    transform: translate(-50%, -50%);
+
+    &.added {
+      opacity: 0;
+    }
+  }
+
+  &.clicked {
+    .fa-shopping-cart {
+      animation: cart 2s ease-in forwards;
+    }
+
+    .fa-square {
+      animation: box 2s ease-in forwards;
+    }
+
+    span.add-to-cart {
+      animation: addcart 2s ease-in forwards;
+    }
+
+    span.added {
+      animation: added 2s ease-in forwards;
+    }
+  }
+} 

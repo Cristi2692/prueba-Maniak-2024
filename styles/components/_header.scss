@@ -1,0 +1,15 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing-md;
+  margin-bottom: 4rem;
+  background-color: $header-bg;
+  color: white;
+  min-height: 120px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+} 

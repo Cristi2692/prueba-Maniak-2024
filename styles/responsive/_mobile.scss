@@ -1,0 +1,25 @@
+@media (max-width: $mobile-breakpoint) {
+  header {
+    .container {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    .search-container {
+      margin-bottom: 10px;
+    }
+
+    .cart-button {
+      align-self: flex-end;
+    }
+  }
+
+  .cart-sheet {
+    width: 100%;
+    right: -100%;
+  }
+} 

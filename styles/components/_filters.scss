@@ -1,0 +1,20 @@
+.filters {
+  display: flex;
+  align-items: center;
+
+  input,
+  select {
+    margin-left: $spacing-sm;
+    padding: $spacing-sm;
+    border: none;
+    border-radius: 5px;
+  }
+
+  input {
+    width: 200px;
+  }
+
+  select {
+    width: 170px;
+  }
+} 

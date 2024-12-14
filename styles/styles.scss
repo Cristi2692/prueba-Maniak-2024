@@ -1,0 +1,26 @@
+// Shared
+@import 'shared/variables';
+
+// Base
+@import 'base/reset';
+@import 'base/variables';
+@import 'base/animations';
+
+// Layout
+@import 'layout/grid';
+
+// Media queries
+@import 'responsive/mobile';
+
+@import "components/filters";
+@import "components/header";
+@import "components/modal";
+
+// Components
+@import '../components/cart/cart.scss';
+@import '../components/cart/cart-item/cart-item.scss';
+@import '../components/cart/cart-sheet/cart-sheet.scss';
+@import '../components/products-list/product-list-item/product-list-item.scss';
+@import '../components/products-list/add-to-cart-button/add-to-cart-button.scss';
+@import '../components/products-list/view-details-button/view-details-button.scss';
+@import '../components/products-list/product-list-item-modal/product-list-item-modal.scss';

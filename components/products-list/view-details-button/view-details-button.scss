@@ -1,0 +1,33 @@
+@import '../../../styles/shared/variables';
+
+.view-details-button {
+    position: relative;
+    align-self: center;
+    width: 200px;
+    height: 34.5px;
+    padding: 0.5rem;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    overflow: hidden;
+
+    &:hover {
+        background-color: #e0e0e0;
+    }
+
+    &:focus {
+        outline: none !important;
+    }
+
+    span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: inherit;
+        color: #fff;
+        transform: translate(-50%, -50%);
+    }
+}
