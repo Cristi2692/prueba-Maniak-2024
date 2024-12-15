@@ -32,7 +32,7 @@ header {
   }
 
   @media (max-width: $breakpoint-sm) {
-    min-height: auto;
+    min-height: fit-content;
     padding: $spacing-sm;
     flex-direction: row;
     flex-wrap: wrap;
