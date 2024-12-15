@@ -1,50 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prueba Maniak</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prueba Maniak</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles/styles.css" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-</head>
-
-<body>
-  <header>
-    <h1>Prueba Maniak</h1>
-    <div class="header-right">
-      <div class="filters">
-        <input type="text" id="search" placeholder="Buscar productos..." />
-        <select id="category-filter" title="Filtrar por categoría">
-          <option value="all">Todas las categorías</option>
-        </select>
+  <body>
+    <header>
+      <h1>Prueba Maniak</h1>
+      <div class="header-right">
+        <div class="filters">
+          <input type="text" id="search" placeholder="Buscar productos..." />
+          <select id="category-filter" title="Filtrar por categoría">
+            <option value="all">Todas las categorías</option>
+          </select>
+        </div>
+        <div class="cart-icon">
+          <span class="material-icons">shopping_cart</span>
+          <span class="cart-count">0</span>
+        </div>
       </div>
-      <div class="cart-icon">
-        <span class="material-icons">shopping_cart</span>
-        <span class="cart-count">0</span>
+    </header>
+
+    <main>
+      <div id="product-list" class="product-grid"></div>
+      <div id="cart-sheet" class="cart-sheet">
+        <div class="cart-sheet-content">
+          <h2>Carrito de compras</h2>
+          <button id="close-cart" class="close-cart">&times;</button>
+          <div class="cart-sheet-inner-content"></div>
+        </div>
       </div>
-    </div>
-  </header>
+    </main>
 
-  <main>
-    <div id="product-list" class="product-grid"></div>
-    <div id="cart-sheet" class="cart-sheet">
-      <div class="cart-sheet-content">
-        <h2>Carrito de compras</h2>
-        <button id="close-cart" class="close-cart">&times;</button>
-        <div class="cart-sheet-inner-content"></div>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Sobre Nosotros</h3>
+          <p>Prueba técnica de e-commerce desarrollada para Maniak</p>
+        </div>
+        <div class="footer-section">
+          <h3>Contacto</h3>
+          <p>Email: info@maniak.com</p>
+          <p>Teléfono: (+34) 666 666 666</p>
+        </div>
+        <div class="footer-section">
+          <h3>Síguenos</h3>
+          <div class="social-icons">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+          </div>
+        </div>
       </div>
-    </div>
-  </main>
-  </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Maniak. Todos los derechos reservados.</p>
+      </div>
+    </footer>
 
-  <script type="module" src="../script.js"></script>
-</body>
-
+    <script type="module" src="../script.js"></script>
+  </body>
 </html>
