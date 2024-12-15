@@ -40,11 +40,13 @@ function renderCartItems() {
 
 export function show() {
   const cartSheet = document.querySelector(".cart-sheet");
+  document.body.style.overflow = 'hidden';
   renderCartItems();
   cartSheet.classList.add("open");
 }
 
 export function close() {
   const cartSheet = document.querySelector(".cart-sheet");
+  document.body.style.overflow = 'auto';
   cartSheet.classList.remove("open");
 }
