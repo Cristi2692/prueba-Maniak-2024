@@ -15,4 +15,23 @@ $spacing-md: 1rem;
 $spacing-lg: 2rem;
 
 // Breakpoints
-$mobile-breakpoint: 768px; 
+$breakpoint-xs: 480px;  // Móviles pequeños
+$breakpoint-sm: 768px;  // Móviles grandes/tablets
+$breakpoint-md: 992px;  // Tablets/pantallas pequeñas
+$breakpoint-lg: 1200px; // Pantallas medianas
+
+// Añadimos variables de animación para consistencia
+$animation-duration-fast: 200ms;
+$animation-duration-normal: 300ms;
+$animation-duration-slow: 500ms;
+$animation-timing: ease-in-out;
+
+// Z-index
+$z-index-modal: 1000;
+$z-index-cart: 1000;
+$z-index-header: 100;
+
+// Shadows
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);

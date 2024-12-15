@@ -19,8 +19,10 @@ function createModal() {
 
   modal.innerHTML = `
     <div class="modal-content">
-      <span class="close">&times;</span>
-      <img id="modal-image" src="" alt="Product image">
+      <button class="close">&times;</button>
+      <div class="image-container">
+        <img id="modal-image" src="" alt="Product image">
+      </div>
       <h3 id="modal-title"></h3>
       <p id="modal-description"></p>
       <p id="modal-price"></p>

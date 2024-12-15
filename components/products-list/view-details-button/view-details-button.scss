@@ -11,11 +11,12 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
     overflow: hidden;
 
     &:hover {
         background-color: #e0e0e0;
+        color: $header-bg;
     }
 
     &:focus {
@@ -27,7 +28,18 @@
         left: 50%;
         top: 50%;
         width: inherit;
-        color: #fff;
+        color: inherit;
         transform: translate(-50%, -50%);
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        width: 180px;
+        height: 32px;
+        padding: 0.4rem;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+        width: 160px;
+        height: 30px;
     }
 }

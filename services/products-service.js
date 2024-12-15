@@ -10,7 +10,9 @@ export async function fetchProducts() {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    return await response.json();
+    const data = await response.json();
+    console.log('Productos cargados:', data);
+    return data;
   } catch (error) {
     console.error("Error fetching data:", error);
     throw error;

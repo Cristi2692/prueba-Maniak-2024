@@ -1,3 +1,20 @@
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color $animation-duration-normal $animation-timing;
+  z-index: calc($z-index-cart - 1);
+  pointer-events: none;
+
+  &.active {
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: all;
+  }
+}
+
 .cart-sheet {
   position: fixed;
   top: 0;
@@ -5,26 +22,51 @@
   width: 400px;
   height: 100%;
   background-color: white;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-  transition: right 0.3s ease-in-out;
-  z-index: 1000;
+  box-shadow: $shadow-lg;
+  transition: right $animation-duration-normal $animation-timing;
+  z-index: $z-index-cart;
 
   &.open {
     right: 0;
   }
 
+  @media (max-width: $breakpoint-md) {
+    width: 320px;
+    right: -320px;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    width: 100%;
+    right: -100%;
+    transition: none;
+    
+    &.open {
+      right: 0;
+    }
+  }
+
   .cart-sheet-content {
     padding: 20px;
-    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 
     h2 {
       font-size: 24px;
       margin-bottom: 20px;
-    }
 
-    p {
-      color: #666;
+      @media (max-width: $breakpoint-sm) {
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
     }
+  }
+
+  .cart-sheet-inner-content {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 10px;
   }
 
   .close-cart {
@@ -47,6 +89,15 @@
     margin-top: 20px;
     font-weight: bold;
     font-size: 18px;
+  }
+
+  .checkout-button {
+    margin-top: 20px;
+    width: 100%;
+    
+    @media (max-width: $breakpoint-sm) {
+      margin-top: 15px;
+    }
   }
 }
 
