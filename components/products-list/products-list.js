@@ -23,8 +23,8 @@ export function initListeners() {
 }
 
 /**
- * Render the list of products.
- * @param {Array<Object>} items - The list of products to render.
+ * Renderizar la lista de productos.
+ * @param {Array<Object>} items - La lista de productos a renderizar.
  */
 function renderProducts(items) {
   productList.innerHTML = "";
@@ -34,8 +34,8 @@ function renderProducts(items) {
 }
 
 /**
- * Extract unique categories from products and populate the category filter.
- * @param {Array<Object>} items - The list of products.
+ * Extraer categorías únicas de los productos y llenar el desplegable de categorías.
+ * @param {Array<Object>} items - La lista de productos.
  */
 function extractAndPopulateCategories(items) {
   categories = [...new Set(items.map((product) => product.category))];
@@ -43,7 +43,7 @@ function extractAndPopulateCategories(items) {
 }
 
 /**
- * Handle changes in the category filter.
+ * Manejar los cambios en el filtro de categoría.
  */
 function handleCategoryChange() {
   const selectedCategory = categoryFilter.value;
@@ -55,7 +55,7 @@ function handleCategoryChange() {
 }
 
 /**
- * Handle search input to filter products by title.
+ * Manejar la entrada de búsqueda para filtrar productos por título.
  */
 function handleSearchInput() {
   const query = searchInput.value.toLowerCase();
@@ -66,9 +66,9 @@ function handleSearchInput() {
 }
 
 /**
- * Populate dropdown with categories.
- * @param {HTMLElement} categoryFilter - The select element.
- * @param {Array<string>} categories - The list of categories.
+ * llenar desplegable con categorías.
+ * @param {HTMLElement} categoryFilter - El elemento select.
+ * @param {Array<string>} categories - La lista de categorías.
  */
 export function populateCategories(categoryFilter, categories) {
   categoryFilter.innerHTML = `<option value="all">All</option>`;

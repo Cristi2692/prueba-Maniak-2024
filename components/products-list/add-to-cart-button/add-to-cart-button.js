@@ -23,6 +23,9 @@ function renderButton() {
   return button;
 }
 
+/**
+ * Animar el boton al añadir al carrito.
+ */
 function animateButton(button) {
   button.classList.add("clicked");
   setTimeout(() => {
@@ -31,7 +34,7 @@ function animateButton(button) {
 }
 
 function addEventListeners(button, product, getCurrentProduct) {
-  // Add to cart from modal
+  // Aniadir al carrito desde el modal
   button.addEventListener("click", () => {
     let productToAdd = product;
     if (!productToAdd && getCurrentProduct) {

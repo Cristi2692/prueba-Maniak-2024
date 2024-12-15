@@ -1,7 +1,7 @@
 /**
- * Fetch data from a given URL.
- * @param {string} url - The endpoint URL.
- * @returns {Promise<any>} - The fetched data.
+ * fetch de productos
+ * @param {string} url - endpoint de la api
+ * @returns {Promise<any>} - fetch de productos
  */
 export async function fetchProducts() {
   try {

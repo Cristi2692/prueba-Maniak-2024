@@ -3,7 +3,7 @@ import { init as initProductsList } from "./components/products-list/products-li
 
 document.addEventListener("DOMContentLoaded", () => {
   /**
-   * Initialize the application by fetching products and setting up event listeners.
+   * Inicializar la aplicación obteniendo productos y configurando los listeners de eventos.
    */
   async function init() {
     try {
@@ -14,6 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Initialize the app
+  // Inicializar la aplicación
   init();
 });

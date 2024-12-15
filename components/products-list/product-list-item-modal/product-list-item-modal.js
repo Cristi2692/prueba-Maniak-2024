@@ -34,7 +34,7 @@ function createModal() {
 
   document.body.appendChild(modal);
 
-  // Save references to modal elements
+  // guardar referencias a los elementos del modal
   modalImage = modal.querySelector("#modal-image");
   modalTitle = modal.querySelector("#modal-title");
   modalDescription = modal.querySelector("#modal-description");
@@ -65,10 +65,10 @@ function hide() {
 }
 
 function bindEvents() {
-  // Close modal with X button
+  // cerrar modal con el boton X
   closeButton.addEventListener("click", () => hide());
 
-  // Close modal clicking outside
+  // cerrar modal al hacer click fuera
   modal.addEventListener("click", (event) => {
     if (event.target === modal) {
       hide();

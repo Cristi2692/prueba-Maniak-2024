@@ -156,7 +156,7 @@ export function close() {
   setTimeout(() => overlay.remove(), 300); // Esperamos a que termine la transición
 }
 
-// Añadir esta función para actualizar el contador
+// función para actualizar el contador
 function updateCartCountDisplay(count) {
   const cartCount = document.querySelector(".cart-count");
   cartCount.textContent = count;

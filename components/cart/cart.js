@@ -88,7 +88,7 @@ function updateCartCountDisplay(totalItems) {
   cartCount.textContent = totalItems;
 }
 
-// Cart calculations
+// calcular el total de items
 function calculateTotalItems(items) {
   return items.reduce((total, item) => total + item.quantity, 0);
 }
@@ -97,7 +97,7 @@ function calculateTotalPrice(items) {
   return items.reduce((total, item) => total + item.getTotalPrice(), 0);
 }
 
-// Public API
+// API publica
 export function init() {
   addListeners();
   updateCartCountDisplay(calculateTotalItems(getItems()));

@@ -7,15 +7,15 @@ export function init(product) {
 }
 
 /**
- * Create a product HTML element with attached event listeners.
- * @param {Object} product - The product object.
- * @returns {HTMLElement} - The product element with listeners.
+ * Crear un elemento HTML de producto con listeners adjuntos.
+ * @param {Object} product - El objeto del producto.
+ * @returns {HTMLElement} - El elemento de producto con listeners.
  */
 export function renderProductListItem(product) {
   const productElement = document.createElement("div");
   productElement.className = "product";
 
-  // Use template literals for better readability
+  // usar template literals para crear el elemento HTML
   const template = `
     <img src="${product.image}" alt="${product.title}" />
     <h3 class="product-title">${product.title}</h3>
