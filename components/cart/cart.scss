@@ -2,11 +2,6 @@
   position: relative;
   cursor: pointer;
   margin-left: 20px;
-  padding: 8px;
-
-  .material-icons {
-    font-size: 2rem;
-  }
 
   .cart-count {
     position: absolute;
@@ -17,28 +12,6 @@
     border-radius: 50%;
     padding: 2px 6px;
     font-size: 12px;
-  }
-
-  @media (max-width: $breakpoint-md) {
-    margin: 0;
-    
-    .material-icons {
-      font-size: 1.8rem;
-    }
-  }
-
-  @media (max-width: $breakpoint-sm) {
-    margin-top: $spacing-md;
-    
-    
-    .material-icons {
-      font-size: 1.6rem;
-    }
-
-    .cart-count {
-      padding: 1px 5px;
-      font-size: 11px;
-    }
   }
 }
 

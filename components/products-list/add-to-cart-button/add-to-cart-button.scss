@@ -12,12 +12,11 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s;
   overflow: hidden;
 
   &:hover {
     background-color: #e0e0e0;
-    color: $header-bg;
   }
 
   &:focus {
@@ -47,7 +46,7 @@
     left: 50%;
     top: 50%;
     width: inherit;
-    color: inherit;
+    color: #fff;
     transform: translate(-50%, -50%);
 
     &.added {
@@ -56,10 +55,6 @@
   }
 
   &.clicked {
-    background-color: #3ba365;
-    transition: background-color 0.3s ease;
-    color: white;
-
     .fa-shopping-cart {
       animation: cart 2s ease-in forwards;
     }
@@ -70,26 +65,10 @@
 
     span.add-to-cart {
       animation: addcart 2s ease-in forwards;
-      
     }
 
     span.added {
       animation: added 2s ease-in forwards;
     }
   }
-
-  @media (max-width: $breakpoint-sm) {
-    width: 180px;
-    height: 32px;
-    padding: 0.4rem;
-    
-    .fa-shopping-cart {
-      font-size: 1.6em;
-    }
-  }
-
-  @media (max-width: $breakpoint-xs) {
-    width: 160px;
-    height: 30px;
-  }
-}
+} 

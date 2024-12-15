@@ -83,6 +83,17 @@ function removeItemFromCart(items, productId) {
   return items.filter((item) => item.id !== productId);
 }
 
+function updateItemQuantity(items, productId, quantity) {
+  const item = findItemById(items, productId);
+  if (item) {
+    item.quantity = Math.max(0, quantity);
+    if (item.quantity === 0) {
+      items = removeItemFromCart(items, productId);
+    }
+  }
+  return items;
+}
+
 function updateCartCountDisplay(totalItems) {
   const cartCount = document.querySelector(".cart-count");
   cartCount.textContent = totalItems;
@@ -116,23 +127,4 @@ export function addItem(product) {
 export function getTotalPrice() {
   const items = getItems();
   return calculateTotalPrice(items);
-}
-
-export function updateItemQuantity(productId, newQuantity) {
-  let items = getItems();
-  items = items.map(item => {
-    if (item.id === productId) {
-      return { ...item, quantity: Math.max(1, newQuantity) };
-    }
-    return item;
-  });
-  saveItems(items);
-  updateCartCountDisplay(calculateTotalItems(items));
-}
-
-export function removeItem(productId) {
-  let items = getItems();
-  items = items.filter(item => item.id !== productId);
-  saveItems(items);
-  updateCartCountDisplay(calculateTotalItems(items));
 }
