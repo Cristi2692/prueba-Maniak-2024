@@ -7,63 +7,9 @@ header {
   background-color: $header-bg;
   color: white;
   min-height: 120px;
-  z-index: $z-index-header;
-  box-shadow: $shadow-sm;
-
-  h1 {
-    font-size: 2rem;
-    white-space: nowrap;
-  }
-
-  @media (max-width: $breakpoint-md) {
-    flex-direction: column;
-    gap: $spacing-md;
-    margin-bottom: 2rem;
-    padding: $spacing-md $spacing-sm;
-
-    h1 {
-      font-size: 1.8rem;
-      margin-bottom: $spacing-sm;
-    }
-  }
-
-  @media (max-width: $breakpoint-sm) {
-    min-height: auto;
-    padding: $spacing-sm;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: $spacing-sm;
-    
-    h1 {
-      font-size: 1.5rem;
-      margin-bottom: 0;
-      padding-top: 0.8rem;
-    }
-  }
 }
 
 .header-right {
   display: flex;
   align-items: center;
-  gap: $spacing-md;
-
-  @media (max-width: $breakpoint-md) {
-    width: calc(100% - #{$spacing-md});
-    justify-content: space-between;
-    gap: $spacing-sm;
-    margin-right: $spacing-md;
-  }
-
-  @media (max-width: $breakpoint-sm) {
-    order: 2;
-    width: 100%;
-    flex-direction: column;
-    gap: $spacing-sm;
-
-    .cart-icon {
-      position: absolute;
-      top: 0rem;
-      right: $spacing-md;
-    }
-  }
 } 
