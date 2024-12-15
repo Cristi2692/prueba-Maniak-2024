@@ -1,4 +1,8 @@
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -65,5 +69,17 @@ header {
       top: 0rem;
       right: $spacing-md;
     }
+  }
+}
+
+main {
+  padding-top: 140px;
+
+  @media (max-width: $breakpoint-md) {
+    padding-top: 160px;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    padding-top: 180px;
   }
 } 
