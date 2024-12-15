@@ -66,10 +66,11 @@
   }
 
   .close-cart {
+    color: $primary-color;
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 24px;
+    font-size: 32px;
     background: none;
     border: none;
     cursor: pointer;

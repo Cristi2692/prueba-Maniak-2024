@@ -143,6 +143,8 @@ export function show() {
   bindCartEvents();
   cartSheet.classList.add("open");
   setTimeout(() => overlay.classList.add('active'), 50);
+
+  overlay.addEventListener('click', close);
 }
 
 export function close() {
