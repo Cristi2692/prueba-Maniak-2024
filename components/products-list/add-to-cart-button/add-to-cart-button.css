@@ -1,0 +1,82 @@
+.cart-button {
+  position: relative;
+  align-self: center;
+  margin-top: 0.3rem;
+  width: 200px;
+  padding: 0.5rem;
+  height: 34.5px;
+  background-color: #eb5e4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  overflow: hidden;
+}
+.cart-button:hover {
+  background-color: #e0e0e0;
+  color: #161616;
+}
+.cart-button:focus {
+  outline: none !important;
+}
+.cart-button .fa-shopping-cart {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: -20%;
+  font-size: 1.8em;
+  transform: translate(-50%, -50%);
+}
+.cart-button .fa-square {
+  position: absolute;
+  z-index: 1;
+  top: -20%;
+  left: 53%;
+  font-size: 0.8em;
+  transform: translate(-50%, -50%);
+}
+.cart-button span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: inherit;
+  color: inherit;
+  transform: translate(-50%, -50%);
+}
+.cart-button span.added {
+  opacity: 0;
+}
+.cart-button.clicked {
+  background-color: #3ba365;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+.cart-button.clicked .fa-shopping-cart {
+  animation: cart 2s ease-in forwards;
+}
+.cart-button.clicked .fa-square {
+  animation: box 2s ease-in forwards;
+}
+.cart-button.clicked span.add-to-cart {
+  animation: addcart 2s ease-in forwards;
+}
+.cart-button.clicked span.added {
+  animation: added 2s ease-in forwards;
+}
+@media (max-width: 768px) {
+  .cart-button {
+    width: 180px;
+    height: 32px;
+    padding: 0.4rem;
+  }
+  .cart-button .fa-shopping-cart {
+    font-size: 1.6em;
+  }
+}
+@media (max-width: 480px) {
+  .cart-button {
+    width: 160px;
+    height: 30px;
+  }
+}/*# sourceMappingURL=add-to-cart-button.css.map */

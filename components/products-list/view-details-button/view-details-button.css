@@ -1,0 +1,42 @@
+.view-details-button {
+  position: relative;
+  align-self: center;
+  width: 200px;
+  height: 34.5px;
+  padding: 0.5rem;
+  background-color: #eb5e4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  overflow: hidden;
+}
+.view-details-button:hover {
+  background-color: #e0e0e0;
+  color: #161616;
+}
+.view-details-button:focus {
+  outline: none !important;
+}
+.view-details-button span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: inherit;
+  color: inherit;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 768px) {
+  .view-details-button {
+    width: 180px;
+    height: 32px;
+    padding: 0.4rem;
+  }
+}
+@media (max-width: 480px) {
+  .view-details-button {
+    width: 160px;
+    height: 30px;
+  }
+}/*# sourceMappingURL=view-details-button.css.map */
