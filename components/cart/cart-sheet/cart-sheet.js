@@ -32,6 +32,9 @@ function renderCartItems() {
           <span>Total:</span>
           <span class="total-price">${getTotalPrice().toFixed(2)}€</span>
         </div>
+        <button class="view-details-button checkout-button">
+          <span>Finalizar Compra</span>
+        </button>
       `
           : "<p>No hay productos en el carrito</p>"
       }

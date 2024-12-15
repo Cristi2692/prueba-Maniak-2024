@@ -73,6 +73,15 @@
     font-weight: bold;
     font-size: 18px;
   }
+
+  .checkout-button {
+    margin-top: 20px;
+    width: 100%;
+    
+    @media (max-width: $breakpoint-sm) {
+      margin-top: 15px;
+    }
+  }
 }
 
 .cart-sheet-inner-content {
